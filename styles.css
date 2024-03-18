@@ -1,0 +1,371 @@
+/* ------------- CSS General ------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ul li{
+    list-style: none;
+}
+
+
+h1{
+    font-size: 30px;
+}
+
+/* ------------- Encabezado  ------------- */
+
+#encabezado {
+    position: sticky;
+    background-color: #ff05a8;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+#encabezado i{
+    font-size: 2em;
+}
+
+.menu{
+    display: flex;
+    gap: 1.5em;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* ------------- Barra de navegación  ------------- */
+#check{
+    display: none;
+}
+
+.checkbtn{
+    float: right;
+    cursor: pointer;
+    align-content: center;
+    margin-left: 20px;
+    display: none;
+}
+
+/* ------------- Sección principal de la página ------------- */
+
+.main{
+    margin: 0 50px;
+}
+
+#main-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bienvenido {
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+}
+
+.bienvenido h1{
+    color: #ff05a8;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.bienvenido p{
+    color: #5d6063;
+    text-align: center;
+}
+
+.imagen-principal{
+    width: 400px;
+    height: 400px;
+}
+
+.imagen-principal img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ------------- Sección acerca de mi de la página ------------- */
+
+#acerca-de-mi{
+    padding: 30px 20px;
+}
+
+#acerca-de-mi h2{
+    color: #ff05a8;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#acerca-de-mi p{
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* ------------- Sección formación-profesional de la página ------------- */
+
+#formacion-profesional{
+    padding: 0 20px;
+}
+
+#formacion-profesional h2{
+    color: #ff05a8;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+#formacion-profesional h3{
+    color: #ff05a8;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#formacion-profesional p{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.container-estudios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px;
+    width: 100%;
+    max-height: 100%;
+}
+.card{
+    border: 4px dotted #c55697;
+    border: 1px solid #d6d9dc;
+    border-radius: 10px;    
+    margin: 15px;
+    padding: 20px;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: auto;
+}
+
+.imagen-container {
+    width: 250px;
+    height:150px;
+    margin-bottom: 10px;
+}
+  
+.imagen-container img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .card{
+        flex-wrap: wrap;
+        max-width: 50%;
+        max-height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #main-principal{
+        flex-wrap: wrap;
+        margin-top: 120px;
+    }
+
+    .bienvenido h1, p{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .imagen-principal{
+        width: 70%;
+        height: 70%;
+    }
+    
+    .imagen-container img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        height: 95%;
+    }
+    .card {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        flex: right;
+        top: 110px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(238, 220, 178);
+        text-align: center;
+
+
+        left: 100%;
+        transition: all 0.5s;
+    }
+
+    #check:checked ~ ul{
+        left: 0%;
+        display: block;
+    }
+
+    #encabezado nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        font-size: 24px;
+    }
+
+    #encabezado nav ul li a{
+        color: #6d1c34;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #check:checked ~ .checkbtn{
+        color: rgb(209, 62, 62);
+    }
+    
+}
+
+  /* ------------- Footer ------------- */
+
+.icono{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3em;  
+}
+
+  /* ------------- Encabezado Contacto ------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-header {
+    text-align: center;
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 10px;
+  
+    width: 80%;
+    margin: 10px auto;
+    padding: 30px;
+  }
+
+  /* ------------- Formulario ------------- */
+  
+  .form-header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .formulario {
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+  
+    width: 60%;
+    padding: 30px;
+    margin: 30px 0 40px 0;
+  }
+  
+  
+/* ------------- Campos del Formulario ------------- */
+
+.form-row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-row label {
+    margin-bottom: 3px;
+    text-align: initial;
+  }
+
+  .form-row input[type="text"],
+  .form-row input[type="email"],
+  .form-row input[type="tel"] {
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .form-row textarea {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+  
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+  
+    width: 100%;
+  }
+
+  .form-row button {
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #ffffff;
+    background-color: #5995da;
+  
+    border: none;
+    border-radius: 3px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+  
+  .form-row button:hover {
+    background-color: #76aeed;
+  }
+  
+  
+  .form-row button:active {
+    background-color: #407fc7;
+  }
